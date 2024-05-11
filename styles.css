@@ -1,0 +1,81 @@
+ /* General Styling */
+ body {
+    background: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container and Row */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Page Division and Offering Content Area */
+.mu-page-division-area, .mu-offering-content-area {
+    padding: 20px;
+    background: linear-gradient(to left, #7a60ff, #cd9ffa);
+    margin-bottom: 20px;
+}
+
+.mu-page-division-area h2, .mu-offering-content-area h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Division List */
+.division {
+    list-style: none;
+    padding: 0;
+}
+
+.division li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.division li a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    background-color: white;
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #ffffff;
+}
+
+.table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}
+
+/* Initials */
+.initials {
+    font-weight: bold;
+}
