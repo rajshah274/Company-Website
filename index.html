@@ -197,10 +197,9 @@
              </div>
      </div>
   </div>
- </section>
+</section>
  
 <!-------About End-------> 
-
 <!-------Features Start------->
 <section class="feature section-padding" data-scroll-index='2'>
   <div class="container">
@@ -245,9 +244,35 @@
        </div>
      </div>
   </div>
- </section>
+</section>
  <!-------Features End------->
  
+
+<!-- Services Start -->
+<div class="container-fluid bg-light py-6 px-5">
+  <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+      <h1 class="display-5 text-uppercase mb-4">INDUSTRIES<span class="text-primary"> WE SERVE</span>
+  </div>
+  <div class="row g-5">
+      <!-- Repeat this block for each industry -->
+      <div class="col-lg-4 col-md-6">
+          <div class="service-item bg-white d-flex flex-column align-items-center text-center">
+              <img class="img-fluid" src="images/pexels-pixabay-139398.jpg" alt="">
+              <div class="service-icon bg-white">
+                  <i class="fa fa-3x fa-building text-primary"></i>
+              </div>
+              <div class="px-4 pb-4">
+                  <h4 class="text-uppercase mb-3">Building Construction</h4>
+                  <p>Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet magna elitr amet kasd diam duo</p>
+                  <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- End of repeat block -->
+  </div>
+</div>
+<!-- Services End -->
+
 
 
 
@@ -331,6 +356,35 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
 <!-- scrollIt js --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvvP9zzkPAHU8bpa6J" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBkHyiKwOKGCpW9y5uAMJoFf6IMoHP65VFlJHndFl" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYkdj4rrxW3lcPurH0aR8tITCB6A4K/A2gPnhy4jR9giBj60r4CU9P/BrzZF8p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var currentIndex = 0;
+    var images = $('.banner-slider img');
+    var imageCount = images.length;
+
+    function showNextImage() {
+      images.eq(currentIndex).removeClass('active');
+      currentIndex = (currentIndex + 1) % imageCount;
+      images.eq(currentIndex).addClass('active');
+    }
+
+    setInterval(showNextImage, 3000);
+
+    $('.carousel-control-prev').click(function() {
+      images.eq(currentIndex).removeClass('active');
+      currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+      images.eq(currentIndex).addClass('active');
+    });
+
+    $('.carousel-control-next').click(function() {
+      showNextImage();
+    });
+  });
+</script>
 <script src="js/scrollIt.min.js"></script> 
 <script src="js/wow.min.js"></script> 
 <script>
@@ -397,34 +451,6 @@ $(window).on("load",function (){
 });
 
 </script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvvP9zzkPAHU8bpa6J" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBkHyiKwOKGCpW9y5uAMJoFf6IMoHP65VFlJHndFl" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYkdj4rrxW3lcPurH0aR8tITCB6A4K/A2gPnhy4jR9giBj60r4CU9P/BrzZF8p" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function() {
-    var currentIndex = 0;
-    var images = $('.banner-slider img');
-    var imageCount = images.length;
 
-    function showNextImage() {
-      images.eq(currentIndex).removeClass('active');
-      currentIndex = (currentIndex + 1) % imageCount;
-      images.eq(currentIndex).addClass('active');
-    }
-
-    setInterval(showNextImage, 3000);
-
-    $('.carousel-control-prev').click(function() {
-      images.eq(currentIndex).removeClass('active');
-      currentIndex = (currentIndex - 1 + imageCount) % imageCount;
-      images.eq(currentIndex).addClass('active');
-    });
-
-    $('.carousel-control-next').click(function() {
-      showNextImage();
-    });
-  });
-</script>
 </body>
 </html>
