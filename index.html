@@ -3,15 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Trimax Chemicals</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRBNR2TTZJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BRBNR2TTZJ');
-</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -20,6 +11,113 @@
 <!-- Font Google -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .banner-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .banner-slider img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+  }
+
+  .banner-slider img.active {
+    display: block;
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 2;
+  }
+
+  .banner-text {
+    color: #fff;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 30px;
+    z-index: 3;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+  .service-item {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.service-icon i {
+    color: #007bff;
+}
+
+.service-item h4 {
+    color: #343a40;
+}
+
+.service-item p {
+    color: #6c757d;
+}
+
+.service-item a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.service-item a:hover {
+    text-decoration: underline;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -32,7 +130,7 @@
         <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">About</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Features</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="/solvents.html" >Product</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/solvents.html">Product</a> </li>
         <li class="nav-item"> <a class="nav-link" href="/Industries.html">Industries</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">Contact</a> </li>
       </ul>
@@ -40,25 +138,31 @@
   </div>
 </nav>
 <!-- End Navbar --> 
-<!-------Banner Start------->
+<!-- Banner with Background Slideshow -->
 <section class="banner" data-scroll-index='0'>
+  <div class="banner-slider">
+    <img src="images/pexels-chokniti-khongchum-1197604-3938023.jpg" alt="Banner 1" class="active">
+    <img src="images/pexels-paduret-1193743.jpg" alt="Banner 2">
+    <img src="images/pexels-rethaferguson-3825573.jpg" alt="Banner 3">
+  </div>
   <div class="banner-overlay">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-12">
           <div class="banner-text">
             <h2 class="white">Trimax Chemicals</h2>
-            <h6 class="white">A Reliable  Chemical Supplier.</h6>
-            <p class="banner-text white">Welcome to Trimax Chemicals, where innovation meets reliability. At the heart of our operations lies a deep-rooted commitment to quality, sustainability, and customer satisfaction.At Trimax Chemicals, we believe in the power of chemistry to transform industries and improve lives. Our portfolio is a testament to our dedication to excellence, offering a wide range of high-quality chemicals tailored to meet the unique needs of our clients.</p>
+            <h6 class="white">A Reliable Chemical Supplier.</h6>
+            <p class="banner-text white">Welcome to Trimax Chemicals, where innovation meets reliability. At the heart of our operations lies a deep-rooted commitment to quality, sustainability, and customer satisfaction. At Trimax Chemicals, we believe in the power of chemistry to transform industries and improve lives. Our portfolio is a testament to our dedication to excellence, offering a wide range of high-quality chemicals tailored to meet the unique needs of our clients.</p>
           </div>
         </div>
-        <div class="col-md-4 col-sm-12" style = "padding-top: 50px;"> <img src="images/iphone-screen.png" class="img-fluid wow fadeInUp"/> </div>
       </div>
     </div>
   </div>
-  <span class="svg-wave"> <img class="svg-hero" src="images/applight-wave.svg"> </span> </section>
-
-<!-------Banner End-------> 
+  <span class="svg-wave">
+    <img class="svg-hero" src="images/applight-wave.svg">
+  </span>
+</section>
+<!-- End Banner -->
 
 <!-------About Start------->
 
@@ -91,72 +195,37 @@
                  <p>Our team is dedicated to providing exceptional customer service, ensuring that each client's needs are met with personalized solutions and support.</p>
                </div>
              </div>
-           </div>
-       </div>
      </div>
   </div>
  </section>
  
 <!-------About End-------> 
 
-<!-------Purple Line Start------->
-<section class="video-section prelative text-center white">
-  <div class="section-padding video-overlay">
-     <div class="container">
-       <!-- Removed video content, leaving only the structure for the purple line -->
-     </div>
+<!-- Services Start -->
+<div class="container-fluid bg-light py-6 px-5">
+  <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+      <h1 class="display-5 text-uppercase mb-4">INDUSTRIES<span class="text-primary"> WE SERVE</span>
   </div>
- </section>
- <!-------Purple Line End------->
+  <div class="row g-5">
+      <!-- Repeat this block for each industry -->
+      <div class="col-lg-4 col-md-6">
+          <div class="service-item bg-white d-flex flex-column align-items-center text-center">
+              <img class="img-fluid" src="images/pexels-pixabay-139398.jpg" alt="">
+              <div class="service-icon bg-white">
+                  <i class="fa fa-3x fa-building text-primary"></i>
+              </div>
+              <div class="px-4 pb-4">
+                  <h4 class="text-uppercase mb-3">Building Construction</h4>
+                  <p>Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet magna elitr amet kasd diam duo</p>
+                  <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- End of repeat block -->
+  </div>
+</div>
+<!-- Services End -->
 
-<!-------Features Start------->
-<section class="feature section-padding" data-scroll-index='2'>
-  <div class="container">
-     <div class="row">
-       <div class="col-md-12">
-         <div class="sectioner-header text-center">
-           <h3>Our Services</h3>
-           <span class="line"></span>
-           <p>Discover how Trimax Chemicals can enhance your chemical needs with our comprehensive services.</p>
-         </div>
-         <div class="section-content text-center">
-           <div class="row">
-             <!-- Text Column -->
-             <div class="col-md-6">
-               <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
-                 <div class="media-body">
-                  <h5>Quality Chemicals</h5>
-                  <p>We offer a wide range of high-quality chemicals, sourced from reputable suppliers and tested for purity and safety.</p>
-                 </div>
-               </div>
-               <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
-                 <div class="media-body">
-                  <h5>Global Reach</h5>
-                  <p>With a global network, Trimax Chemicals can deliver products to clients worldwide, ensuring that no matter where you are, we can provide the chemicals you need.</p>
-                 </div>
-               </div>
-               <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
-                 <div class="media-body">
-                  <h5>Customer-Centric</h5>
-                  <p>Our team is dedicated to providing exceptional customer service, ensuring that each client's needs are met with personalized solutions and support.</p>
-                 </div>
-               </div>
-             </div>
-             <!-- Image Column -->
-             <div class="col-md-6">
-               <div class="feature-image">
-                 <img src="images/user2.png" class="img-fluid wow fadeInUp"/>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-  </div>
- </section>
- <!-------Features End------->
- 
- 
 
 
 
@@ -173,7 +242,7 @@
         <div class="section-content">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-8">
-              <form id="contact_form" action="">
+              <form id="contact_form" action="" name="">
                 <div class="row">
                   <div class="col">
                     <input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required="">
@@ -187,6 +256,8 @@
                 <button class="btn-grad w-100 text-uppercase" type="submit" name="button">submit</button>
               </form>
             </div>
+
+
             <div class="col-sm-12 col-md-12 col-lg-4">
               <div class="contact-info white" style="padding-top: 16px; padding-right: 16px; padding-left: 16px;;">
                 <div class="contact-item media" style="margin-top: 15px; margin-bottom: 15px;;"> <i class="fa fa-map-marker-alt media-left media-right-margin"></i>
@@ -225,6 +296,8 @@
     </div>
   </div>
 </section>
+
+
 <!-------Contact End-------> 
 
 
@@ -301,6 +374,35 @@ $(window).on("load",function (){
 	});
 });
 
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvvP9zzkPAHU8bpa6J" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBkHyiKwOKGCpW9y5uAMJoFf6IMoHP65VFlJHndFl" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYkdj4rrxW3lcPurH0aR8tITCB6A4K/A2gPnhy4jR9giBj60r4CU9P/BrzZF8p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var currentIndex = 0;
+    var images = $('.banner-slider img');
+    var imageCount = images.length;
+
+    function showNextImage() {
+      images.eq(currentIndex).removeClass('active');
+      currentIndex = (currentIndex + 1) % imageCount;
+      images.eq(currentIndex).addClass('active');
+    }
+
+    setInterval(showNextImage, 3000);
+
+    $('.carousel-control-prev').click(function() {
+      images.eq(currentIndex).removeClass('active');
+      currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+      images.eq(currentIndex).addClass('active');
+    });
+
+    $('.carousel-control-next').click(function() {
+      showNextImage();
+    });
+  });
 </script>
 </body>
 </html>
