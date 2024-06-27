@@ -375,7 +375,7 @@
         <div class="section-content">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-8">
-              <form id="contact_form" action="" name="">
+              <form id="contact_form" action="" name="submit-to-google-sheet">
                 <div class="row">
                   <div class="col">
                     <input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required="">
@@ -536,6 +536,17 @@ $(window).on("load",function (){
 	});
 });
 
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwB3L9VlrBFRZv6GTOZR9CHRjbUdrvOyfi2bRFgLgp_6R7y7CDzSDtqd0KkmZDNTXGY/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
 </script>
 
 </body>
