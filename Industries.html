@@ -7,6 +7,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- Custom CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -49,41 +51,42 @@
 <body>
     <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="myNavbar">
-    <div class="container">
-        <!-- Updated navbar-brand to include an image -->
-        <a class="navbar-brand navbar-logo" href="#">
-            <img src="images/logo.png" alt="logo" class="logo-1">
-        </a>
-        <!-- Updated button to use the correct data-target -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fas fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <!-- Updated nav-item classes and href attributes -->
-                <li class="nav-item">
-                    <a class="nav-link" href="/index.html" >Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" data-scroll-nav="1">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" data-scroll-nav="2">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/solvents.html">Product</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/Industries.html">Industries</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" data-scroll-nav="6">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+  <div class="container">
+      <!-- Updated navbar-brand to include an image -->
+      <a class="navbar-brand navbar-logo" href="#">
+          <img src="images/logo.png" alt="logo" class="logo-1">
+      </a>
+      <!-- Updated button to use the correct data-target -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fas fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <!-- Updated nav-item classes and href attributes -->
+              <li class="nav-item">
+                  <a class="nav-link" href="/index.html" >Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/index.html">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/index.html">Features</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/solvents.html">Product</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/Industries.html">Industries</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+              </li>
+          </ul>
+      </div>
+  </div>
 </nav>
 <!-- End Navbar -->
+
 <!-- Industries Section Start -->
 <section class="industries-section" style="background-image: url(./images/Industry-Economy-1.jpg); background-size: 100% 100%;">
     <div class="container">
@@ -174,7 +177,7 @@
 
 
 <!-------Contact Start------->
-<section class="contact section-padding" data-scroll-index="6">
+<section class="contact section-padding" id="contact">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -247,5 +250,8 @@
     <!-- Optional: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmjL2Z2eX" crossorigin="anonymous"></script>
-</body>
+      </script>
+
+  </body>
+
 </html>
