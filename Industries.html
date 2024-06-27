@@ -70,7 +70,7 @@
                   <a class="nav-link" href="/index.html">About</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="/index.html">Features</a>
+                  <a class="nav-link" href="/index.html">Services</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="/solvents.html">Product</a>
@@ -189,7 +189,7 @@
         <div class="section-content">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-8">
-              <form id="contact_form" action="" name="">
+              <form id="contact_form" action="" name="submit-to-google-sheet">
                 <div class="row">
                   <div class="col">
                     <input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required="">
@@ -250,7 +250,17 @@
     <!-- Optional: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmjL2Z2eX" crossorigin="anonymous"></script>
-      </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwB3L9VlrBFRZv6GTOZR9CHRjbUdrvOyfi2bRFgLgp_6R7y7CDzSDtqd0KkmZDNTXGY/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
 
   </body>
 
